@@ -1,97 +1,52 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include "Rectangle.h"
 using namespace std;
-class rectangle
-{
-private:
-	int a;
-	int h;
-public:
-	rectangle()
-	{
-		a = 0;
-		h = 0;
-		cout << "\nСпрацював конструктор класу" << endl;
-	}
-	~rectangle()
-	{
-		cout << "\nСпрацював деструктор класу" << endl;
-	}
-	int getA(void)
-	{
-		return a;
-	}
-	int getH(void)
-	{
-		return h;
-	}
-	void setA(int A)
-	{
-		if (A <= 0)
-		{
-			cout << "Помилково введено значення а!";
-			return;
-		}
-		this->a = A;
 
-	}
-
-	void setH(int H)
-	{
-
-		if (H <= 0)
-		{
-			cout << "Помилково введено значення h!";
-			return;
-		}
-		this->h = H;
-	}
-	int per(void)
-	{
-		int per = 2 * (a + h);
-		return per;
-	}
-	int area(void)
-	{
-		int area = a * h;
-		return area;
-	}
-	void PrintData()
-	{
-		cout << endl << "Введені значення: " << endl;
-		cout << "a = " << getA() << endl;
-		cout << "h = " << getH() << endl << endl;
-		cout << "Периметр = 2*(" << getA() << "+" << getH() << ") = " << per() << endl;
-		cout << "Площа = " << getA() << " * " << getH() << " = " << area() << endl;
-	}
-};
-
-
+void PrintData(Rectangle& tmp); 
+	
 int main()
 {
-	int a = 0, h = 0;
-	system("chcp 1251");
-	rectangle rec_1;
-	cout << "\nВведіть значення а: ";
-	do
+	try
 	{
-		cin >> a;
-		if (a <= 0)
+		int width, height;
+		system("chcp 1251");
+		Rectangle rec_1;
+		cout << "\nВведіть значення ширини: ";
+		do
+		{	
+			cin >> width;
+			if (width <= 0)
+			{
+				cout << "\nПомилково введено значення ширини, повторіть спробу: ";
+			}
+		} while (width <= 0);
+
+		rec_1.SetA(width);
+
+		cout << "\nВведіть значення висоти: ";
+		do
 		{
-			cout << "\nПомилково введено значення а, повторіть спробу: ";
-		}
-	} while (a <= 0);
-	rec_1.setA(a);
-	cout << "\nВведіть значення h: ";
-	do
+			cin >> height;
+			if (height <= 0)
+			{
+				cout << "\nПомилково введено значення висоти, повторіть спробу: ";
+			}
+		} while (height <= 0);
+
+		rec_1.SetH(height);
+		PrintData(rec_1);
+	}
+	catch (const char* message)
 	{
-		cin >> h;
-		if (h <= 0)
-		{
-			cout << "\nПомилково введено значення h, повторіть спробу: ";
-		}
-	} while (h <= 0);
-	rec_1.setH(h);
-	rec_1.PrintData();
+		cout << "Error:" << message << endl;
+	}
 	return 0;
+}
+void PrintData(Rectangle& tmp) {
+	cout << endl << "Введені значення: " << endl;
+	cout << "ширина = " << tmp.GetA() << endl;
+	cout << "висота = " << tmp.GetH() << endl << endl;
+	cout << "Периметр = 2*(" << tmp.GetA() << "+" << tmp.GetH() << ") = " << tmp.Per() << endl;
+	cout << "Площа = " << tmp.GetA() << " * " << tmp.GetH() << " = " << tmp.Area() << endl;
 }
