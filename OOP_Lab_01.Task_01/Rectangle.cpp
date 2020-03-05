@@ -1,56 +1,66 @@
 #include "Rectangle.h"
+#include <iostream>
+
+using namespace std;
 
 Rectangle::Rectangle() 	{
 	width = 0;
 	height = 0;
-	cout << "\nСпрацював конструктор_1 класу" << endl;
+	cout << "\nConstructor_1" << endl;
 }
 Rectangle::Rectangle(int width, int height)
 {
 	this->width = width;
 	this->height = height;
-	cout << "\nСпрацював конструктор_2 класу" << endl;
+	cout << "\nConstructor_2" << endl;
 }
 Rectangle::~Rectangle()
 {
-	cout << "\nСпрацював деструктор класу" << endl;
+	cout << "\nDestructor" << endl;
 }
 
-int Rectangle::GetA(void)
+Rectangle::Rectangle(const Rectangle& copy_source)
+{
+	cout << "\nConstructor copy" << endl;
+	this->width = copy_source.width;
+	this->height = copy_source.height;
+}
+
+int Rectangle::GetWidth()
 {
 	return this->width;
 }
 
-int Rectangle::GetH(void)
+int Rectangle::GetHeight()
 {
 	return this->height;
 }
 
-void Rectangle::SetA(int weight)
+void Rectangle::SetWidth(int weight)
 {
 	if (weight <= 0)
 	{
-		throw "Помилково введено значення ширини!";
+		throw "The width value was entered incorrectly!";
 	}
 	this->width = weight;
 }
 
-void Rectangle::SetH(int height)
+void Rectangle::SetHeigth(int height)
 {
 	if (height <= 0)
 	{
-		throw "Помилково введено значення висоти!";
+		throw "The height value was entered incorrectly!";
 	}
 	this->height = height;
 }
 
-int Rectangle::Per(void)
+int Rectangle::Perimeter()
 {
 	int per = 2 * (this->width + this->height);
 	return per;
 }
 
-int Rectangle::Area(void)
+int Rectangle::Square()
 {
 	int area = this->width * this->height;
 	return area;

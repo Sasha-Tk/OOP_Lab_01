@@ -12,30 +12,32 @@ int main()
 		int width, height;
 		system("chcp 1251");
 		Rectangle rec_1;
-		cout << "\nВведіть значення ширини: ";
+		cout << "\nEnter a width value: ";
 		do
 		{	
 			cin >> width;
 			if (width <= 0)
 			{
-				cout << "\nПомилково введено значення ширини, повторіть спробу: ";
+				cout << "\nThe width value was entered incorrectly, please try again: ";
 			}
 		} while (width <= 0);
 
-		rec_1.SetA(width);
+		rec_1.SetWidth(width);
 
-		cout << "\nВведіть значення висоти: ";
+		cout << "\nEnter a height value: ";
 		do
 		{
 			cin >> height;
 			if (height <= 0)
 			{
-				cout << "\nПомилково введено значення висоти, повторіть спробу: ";
+				cout << "\nThe height value was entered incorrectly, please try again: ";
 			}
 		} while (height <= 0);
 
-		rec_1.SetH(height);
+		rec_1.SetHeigth(height);
 		PrintData(rec_1);
+		Rectangle rec_2(rec_1);
+		PrintData(rec_2);
 	}
 	catch (const char* message)
 	{
@@ -44,9 +46,9 @@ int main()
 	return 0;
 }
 void PrintData(Rectangle& tmp) {
-	cout << endl << "Введені значення: " << endl;
-	cout << "ширина = " << tmp.GetA() << endl;
-	cout << "висота = " << tmp.GetH() << endl << endl;
-	cout << "Периметр = 2*(" << tmp.GetA() << "+" << tmp.GetH() << ") = " << tmp.Per() << endl;
-	cout << "Площа = " << tmp.GetA() << " * " << tmp.GetH() << " = " << tmp.Area() << endl;
+	cout << endl << "Output data: " << endl;
+	cout << "Widht = " << tmp.GetWidth() << endl;
+	cout << "Height = " << tmp.GetHeight() << endl;
+	cout << "Perimeter = 2*(" << tmp.GetWidth() << "+" << tmp.GetHeight() << ") = " << tmp.Perimeter() << endl;
+	cout << "Square = " << tmp.GetWidth() << " * " << tmp.GetHeight() << " = " << tmp.Square() << endl;
 }
