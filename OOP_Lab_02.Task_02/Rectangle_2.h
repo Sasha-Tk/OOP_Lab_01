@@ -6,8 +6,8 @@ private:
 	int *width;
 	int *height;
 	int n;
-public:
 	void InitRectangle(int n, int value);
+public:
 	Rectangle_2();
 	Rectangle_2(int n);
 	Rectangle_2(int n, int value);

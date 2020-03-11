@@ -29,8 +29,7 @@ Rectangle_2::Rectangle_2(int n)
 Rectangle_2::Rectangle_2(int n, int value)
 {
 	cout << "\nConstructor_2" << endl;
-	this->n = n;
-	Rectangle_2::InitRectangle(this->n, value);
+	Rectangle_2::InitRectangle(n, value);
 }
 Rectangle_2::~Rectangle_2()
 {

@@ -9,9 +9,8 @@ int main()
 {
 	try
 	{
-		system("chcp 1251");
 		int width, height, n;
-		cout << "\nEnter a n value: ";
+		cout << "Enter a n value: ";
 		n = CheckValue(0);
 		Rectangle_2* rec_1 = new Rectangle_2(n); //rec_1 is object in dynamic memory
 		rec_1->SetN(n);
