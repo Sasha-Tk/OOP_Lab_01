@@ -3,7 +3,7 @@
 #include "Rectangle.h"
 using namespace std;
 
-void PrintData(Rectangle& tmp); 
+void PrintData(Rectangle_2& tmp); 
 	
 int main()
 {
@@ -11,7 +11,7 @@ int main()
 	{
 		int width, height;
 		system("chcp 1251");
-		Rectangle rec_1;
+		Rectangle_2 rec_1;
 		cout << "\nEnter a width value: ";
 		do
 		{	
@@ -36,7 +36,7 @@ int main()
 
 		rec_1.SetHeigth(height);
 		PrintData(rec_1);
-		Rectangle rec_2(rec_1);
+		Rectangle_2 rec_2(rec_1);
 		PrintData(rec_2);
 	}
 	catch (const char* message)
@@ -45,7 +45,7 @@ int main()
 	}
 	return 0;
 }
-void PrintData(Rectangle& tmp) {
+void PrintData(Rectangle_2& tmp) {
 	cout << endl << "Output data: " << endl;
 	cout << "Widht = " << tmp.GetWidth() << endl;
 	cout << "Height = " << tmp.GetHeight() << endl;

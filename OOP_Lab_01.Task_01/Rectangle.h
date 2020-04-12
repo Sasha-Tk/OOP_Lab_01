@@ -1,15 +1,15 @@
 #pragma once
 
-class Rectangle
+class Rectangle_2
 {
 private:
 	int width;
 	int height;
 public:
-	Rectangle();
-	Rectangle(int a, int h);
-	~Rectangle();
-	Rectangle(const Rectangle& copy_source);
+	Rectangle_2();
+	Rectangle_2(int a, int h);
+	~Rectangle_2();
+	Rectangle_2(const Rectangle_2& copy_source);
 	int GetWidth();
 	int GetHeight();
 	void SetWidth(int A);
