@@ -3,40 +3,40 @@
 
 using namespace std;
 
-Rectangle_2::Rectangle_2() 	{
+Rectangle::Rectangle() 	{
 	width = 0;
 	height = 0;
 	cout << "\nConstructor_1" << endl;
 }
-Rectangle_2::Rectangle_2(int width, int height)
+Rectangle::Rectangle(int width, int height)
 {
 	this->width = width;
 	this->height = height;
 	cout << "\nConstructor_2" << endl;
 }
-Rectangle_2::~Rectangle_2()
+Rectangle::~Rectangle()
 {
 	cout << "\nDestructor" << endl;
 }
 
-Rectangle_2::Rectangle_2(const Rectangle_2& copy_source)
+Rectangle::Rectangle(const Rectangle& copy_source)
 {
 	cout << "\nConstructor copy" << endl;
 	this->width = copy_source.width;
 	this->height = copy_source.height;
 }
 
-int Rectangle_2::GetWidth()
+int Rectangle::GetWidth()
 {
 	return this->width;
 }
 
-int Rectangle_2::GetHeight()
+int Rectangle::GetHeight()
 {
 	return this->height;
 }
 
-void Rectangle_2::SetWidth(int weight)
+void Rectangle::SetWidth(int weight)
 {
 	if (weight <= 0)
 	{
@@ -45,7 +45,7 @@ void Rectangle_2::SetWidth(int weight)
 	this->width = weight;
 }
 
-void Rectangle_2::SetHeigth(int height)
+void Rectangle::SetHeigth(int height)
 {
 	if (height <= 0)
 	{
@@ -54,13 +54,13 @@ void Rectangle_2::SetHeigth(int height)
 	this->height = height;
 }
 
-int Rectangle_2::Perimeter()
+int Rectangle::Perimeter()
 {
 	int per = 2 * (this->width + this->height);
 	return per;
 }
 
-int Rectangle_2::Square()
+int Rectangle::Square()
 {
 	int area = this->width * this->height;
 	return area;
