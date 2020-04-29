@@ -119,16 +119,6 @@ BusTransportation& BusTransportation::operator()(const char* DriverName,
 	return *this;
 }
 
-
-BusTransportation& BusTransportation::operator=(BusTransportation& other)
-{
-	this->SetDriverName(CopyData(other.GetDriverName()));
-	this->SetCarNumber(CopyData(other.GetCarNumber()));
-	this->Price_For_10_Kilometer = other.Price_For_10_Kilometer;
-	this->SetCostOfOrder(other.GetCostOfOrder());
-	return*this;
-}
-
 char* BusTransportation::PrintData()
 {
 	char* information = new char[255];

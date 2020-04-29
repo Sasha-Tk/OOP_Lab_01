@@ -95,14 +95,6 @@ double CarTransportation::GetCostOfOrder() const
 	return this->CostOfOrder;
 }
 
-CarTransportation& CarTransportation::operator=(CarTransportation& other)
-{
-	this->SetDriverName(CopyData(other.GetDriverName()));
-	this->SetCarNumber(CopyData(other.GetCarNumber()));
-	this->SetCostOfOrder(other.GetCostOfOrder());
-	return*this;
-}
-
 bool operator<(const CarTransportation& c_1, const CarTransportation& c_2)
 {
 	return c_1.CostOfOrder < c_2.CostOfOrder;

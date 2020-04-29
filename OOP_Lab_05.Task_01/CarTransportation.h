@@ -24,5 +24,4 @@ public:
 	double GetCostOfOrder()const;
 	friend bool operator<(const CarTransportation&, const CarTransportation&);
 	friend bool operator>(const CarTransportation&, const CarTransportation&);
-	CarTransportation& operator=(CarTransportation&);
 };

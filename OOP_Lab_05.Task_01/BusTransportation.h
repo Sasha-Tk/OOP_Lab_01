@@ -18,6 +18,5 @@ public:
 	int GetAmount_Of_Passengers();
 	double GetPrice_For_10_Kilometer() const;
 	BusTransportation& operator()(const char*, const char*, const double, const double, const int, const int);
-	BusTransportation& operator=(BusTransportation&);
 	char* PrintData() override;
 };
