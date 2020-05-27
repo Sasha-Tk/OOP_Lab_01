@@ -139,10 +139,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="СomputerСharacteristics.cpp" />
+    <ClCompile Include="СomputerConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="СomputerСharacteristics.h" />
+    <ClInclude Include="СomputerСonfig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
