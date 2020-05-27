@@ -1,6 +1,6 @@
-#include "—omputer—onfig.h"
+Ôªø#include "–°omputer–°onfig.h"
 
- —omputerConfig::—omputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
+ –°omputerConfig::–°omputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
 {
 	cout << "\n**Constructor**";
 
@@ -33,39 +33,39 @@
 	this->Resolution = resolution;
 }
 
-—omputerConfig::~—omputerConfig()
+–°omputerConfig::~–°omputerConfig()
 {
 	cout << "\n**Destructor**";
 }
 
-—omputerConfig* —omputerConfig::InstanceComputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
+–°omputerConfig* –°omputerConfig::InstanceComputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
 {
 	cout << "\n**Instance function**";
-	static —omputerConfig instance(CPU, RAM, GPU, resolution);
+	static –°omputerConfig instance(CPU, RAM, GPU, resolution);
 	return &instance;
 }
 
-string —omputerConfig::GetCPU() const
+string –°omputerConfig::GetCPU() const
 {
 	return this->CPU;
 }
 
-int —omputerConfig::GetRAM() const
+int –°omputerConfig::GetRAM() const
 {
 	return this->RAM;
 }
 
-string —omputerConfig::GetGPU() const
+string –°omputerConfig::GetGPU() const
 {
 	return this->GPU;
 }
 
-string —omputerConfig::GetResolution() const
+string –°omputerConfig::GetResolution() const
 {
 	return this->Resolution;
 }
 
-ostream& operator<<(ostream& out, —omputerConfig* config)
+ostream& operator<<(ostream& out, –°omputerConfig* config)
 {
 	out
 		<< "\n\nComputer characteristics:"

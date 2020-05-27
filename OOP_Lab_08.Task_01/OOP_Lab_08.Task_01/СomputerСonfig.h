@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class ÑomputerConfig
+class Ð¡omputerConfig
 {
 private:
 
@@ -13,14 +13,14 @@ private:
 	string GPU;
 	string Resolution;
 
-	ÑomputerConfig(const string CPU, int RAM, const string GPU, const string resolution);
-	~ÑomputerConfig();
+	Ð¡omputerConfig(const string CPU, int RAM, const string GPU, const string resolution);
+	~Ð¡omputerConfig();
 public:
-	static ÑomputerConfig* InstanceComputerConfig(const string CPU, int RAM, const string GPU, const string resolution);
+	static Ð¡omputerConfig* InstanceComputerConfig(const string CPU, int RAM, const string GPU, const string resolution);
 
 	string GetCPU() const;
 	int GetRAM() const;
 	string GetGPU() const;
 	string GetResolution() const;
-	friend ostream& operator<<(ostream& out, ÑomputerConfig* config);
+	friend ostream& operator<<(ostream& out, Ð¡omputerConfig* config);
 };
