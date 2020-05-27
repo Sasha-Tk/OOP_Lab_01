@@ -1,6 +1,6 @@
-#include "—omputer—haracteristics.h"
+Ôªø#include "–°omputer–°haracteristics.h"
 
- —omputer—haracteristics::—omputer—haracteristics(const string CPU, int RAM, const string GPU, const string resolution)
+ –°omputer–°haracteristics::–°omputer–°haracteristics(const string CPU, int RAM, const string GPU, const string resolution)
 {
 	cout << "\n**Constructor**";
 
@@ -33,39 +33,39 @@
 	this->Resolution = resolution;
 }
 
-—omputer—haracteristics::~—omputer—haracteristics()
+–°omputer–°haracteristics::~–°omputer–°haracteristics()
 {
 	cout << "\n**Destructor**";
 }
 
-—omputer—haracteristics* —omputer—haracteristics::ComputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
+–°omputer–°haracteristics* –°omputer–°haracteristics::ComputerConfig(const string CPU, int RAM, const string GPU, const string resolution)
 {
 	cout << "\n**Instance function**";
-	static —omputer—haracteristics instance(CPU, RAM, GPU, resolution);
+	static –°omputer–°haracteristics instance(CPU, RAM, GPU, resolution);
 	return &instance;
 }
 
-string —omputer—haracteristics::GetCPU() const
+string –°omputer–°haracteristics::GetCPU() const
 {
 	return this->CPU;
 }
 
-int —omputer—haracteristics::GetRAM() const
+int –°omputer–°haracteristics::GetRAM() const
 {
 	return this->RAM;
 }
 
-string —omputer—haracteristics::GetGPU() const
+string –°omputer–°haracteristics::GetGPU() const
 {
 	return this->GPU;
 }
 
-string —omputer—haracteristics::GetResolution() const
+string –°omputer–°haracteristics::GetResolution() const
 {
 	return this->Resolution;
 }
 
-ostream& operator<<(ostream& out, —omputer—haracteristics* config)
+ostream& operator<<(ostream& out, –°omputer–°haracteristics* config)
 {
 	out
 		<< "\n\nComputer characteristics:"
