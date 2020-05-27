@@ -13,14 +13,18 @@ int main()
 		a.PushBack(2);
 		a.PushBack(3);
 		a.PushBack(4);
-
-
 		cout << "\nList in direct order:";
 		for (auto iter = a.GetBegin(); iter != a.GetEnd(); iter++)
 		{
 			cout << "\n\t" << *iter;
 		}
 
+		a.PopFront();
+		cout << "\nList in direct order after deleting first element:";
+		for (auto iter = a.GetBegin(); iter != a.GetEnd(); iter++)
+		{
+			cout << "\n\t" << *iter;
+		}
 
 		cout << "\nList in reverse order:";
 		for (auto iter = a.GetRbegin(); iter != a.GetRend(); iter--)
@@ -28,8 +32,6 @@ int main()
 			cout << "\n\t" << *iter;
 		}
 	}
-
-
 	catch (const char* error)
 	{
 		cout << "\nError: " << error;

@@ -14,11 +14,13 @@ public:
 	ListItem(T item, ListItem<T>* previous, ListItem<T>* next);
 	~ListItem();
 
-	T& GetItem() const;
-	T& GetItemForIterator();
-	 
 	ListItem<T>* GetPrevious() const;
 	ListItem<T>* GetNext() const;
+
+	const T GetItem() const;
+	T& GetItemForIterator();
+	 
+	
 	void SetItem(const T item);
 	void SetPrevious(ListItem<T>* previous);
 	void SetNext(ListItem<T>* next);
@@ -37,7 +39,7 @@ template<typename T> ListItem<T>::~ListItem()
 	cout << "\n**Destructor of class ListItem**";
 }
 
-template<typename T> T& ListItem<T>::GetItem() const
+template<typename T> const T ListItem<T>::GetItem() const
 {
 	return this->item;
 }

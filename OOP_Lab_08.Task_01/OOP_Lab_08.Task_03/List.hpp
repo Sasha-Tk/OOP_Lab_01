@@ -5,7 +5,9 @@
 #include "ListIterator.hpp"
 
 using namespace std;
+
 template <typename T> class ListIterator;
+
 template <typename T> class List
 {
 private:
@@ -28,10 +30,10 @@ public:
 	T PeekBack() const;
 	T PeekFront() const;
 
-	ListIterator<T> GetBegin();
-	ListIterator<T> GetEnd();
-	ListIterator<T> GetRbegin();
-	ListIterator<T> GetRend();
+	const ListIterator<T> GetBegin();
+	const ListIterator<T> GetEnd();
+	const ListIterator<T> GetRbegin();
+	const ListIterator<T> GetRend();
 };
 
 template <typename T>List<T>::List()
@@ -145,25 +147,25 @@ template<typename T> T List<T>::PeekFront() const
 	return this->head->GetItem();
 }
 
-template<typename T> ListIterator<T> List<T>::GetBegin()
+template<typename T> const ListIterator<T> List<T>::GetBegin()
 {
 	ListIterator<T> iter_b(this, this->head);
 	return iter_b;
 }
 
-template<typename T> ListIterator<T> List<T>::GetEnd()
+template<typename T> const ListIterator<T> List<T>::GetEnd()
 {
 	ListIterator<T> iter_e(this, nullptr);
 	return iter_e;
 }
 
-template<typename T> ListIterator<T> List<T>::GetRbegin()
+template<typename T> const ListIterator<T> List<T>::GetRbegin()
 {
 	ListIterator<T> iter_rb(this, this->tail);
 	return iter_rb;
 }
 
-template<typename T> ListIterator<T> List<T>::GetRend()
+template<typename T> const ListIterator<T> List<T>::GetRend()
 {
 	ListIterator<T> iter_re(this, nullptr);
 	return iter_re;

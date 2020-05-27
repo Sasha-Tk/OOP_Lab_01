@@ -11,19 +11,22 @@ private:
 public:
 	ListIterator();
 	ListIterator(List<T>* list, ListItem<T>* element);
+
 	~ListIterator();
-	ListIterator<T>& operator=(const ListIterator<T> iterator);
+
+	ListIterator<T>& operator=(ListIterator<T> iterator);
 	ListIterator<T>& operator++();
 	ListIterator<T>& operator--();
 	ListIterator<T>& operator++(int);
 	ListIterator<T>& operator--(int);
-	bool operator!=( const ListIterator<T> other);
+	bool operator!=(const ListIterator<T> other);
 	bool operator==(const ListIterator<T> other);
 	T& operator*();
 };
 
 template<typename T>  ListIterator<T>::ListIterator()
 {
+	//cout << "\n**Constructor of class ListIterator**";
 	this->list = nullptr;
 	this->element = nullptr;
 }
@@ -36,13 +39,15 @@ template<typename T> ListIterator<T>::ListIterator(List<T>* list, ListItem<T>* e
 
 template<typename T> ListIterator<T>::~ListIterator()
 {
-
+	//cout << "\n**Destructor of class ListIterator**";
 }
 
-template<typename T> ListIterator<T>& ListIterator<T>::operator=(const ListIterator<T> iterator)
+template<typename T> ListIterator<T>& ListIterator<T>::operator=(ListIterator<T> iterator)
 {
+	cout << "\nemplate<typename T> ListIterator<T>& ListIterator<T>::operator=(const ListIterator<T> iterator)";
 	this->element = iterator.element;
 	this->list = iterator.list;
+	return *this;
 }
 
 template<typename T> ListIterator<T>& ListIterator<T>::operator++()

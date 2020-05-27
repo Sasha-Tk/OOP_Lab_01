@@ -143,7 +143,6 @@
     <ClInclude Include="ListIterator.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ListIterator.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
