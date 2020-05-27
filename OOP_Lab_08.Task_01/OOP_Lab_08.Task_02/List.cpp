@@ -164,4 +164,3 @@ void List::Sort()
 {
 	this->algorithm->ToSort(this->head, this->tail);
 }
-

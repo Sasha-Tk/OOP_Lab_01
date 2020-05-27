@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 
 using namespace std;
@@ -20,6 +19,4 @@ public:
 	void SetItem(const int item);
 	void SetPrevious(ListItem* previous);
 	void SetNext(ListItem* next);
-
 };
-

@@ -4,4 +4,3 @@ class InsertionSort : public SortingAlgorithm
 {
 	void ToSort(ListItem* begin, ListItem* end) override;
 };
-

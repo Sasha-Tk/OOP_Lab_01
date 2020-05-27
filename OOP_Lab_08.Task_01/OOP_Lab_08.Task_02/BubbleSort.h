@@ -5,4 +5,3 @@ class BubbleSort :
 {
 	void ToSort(ListItem* begin, ListItem* end) override;
 };
-
